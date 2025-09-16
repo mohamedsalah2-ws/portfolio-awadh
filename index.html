@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>محفظة أعمال — عوض بن حاسوم الدرمكي</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0ea5a4;
+      --muted:#6b7280;
+      --shadow:0 8px 30px rgba(2,6,23,0.06);
+      --rounded:14px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Cairo',sans-serif;background:var(--bg);color:#0f172a;margin:0;line-height:1.6}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block}
+
+    .hero{display:flex;gap:20px;align-items:center;margin-top:20px}
+    .hero-left{flex:1}
+    .hero-right{width:300px}
+    h1{font-size:30px;margin:0 0 6px}
+    p.lead{color:var(--muted);margin:0 0 12px}
+
+    /* portfolio grid */
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .filter{padding:8px 12px;border-radius:999px;border:1px solid #e6eef2;background:#fff;cursor:pointer}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+    .card h4{margin:10px 0 6px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* modal */
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal .inner{background:var(--card);border-radius:12px;max-width:900px;width:100%;max-height:90vh;overflow:auto;padding:16px}
+    .modal img{width:100%;height:auto;border-radius:8px}
+
+    /* about & publications */
+    .about{display:flex;gap:18px;margin-top:22px}
+    .about img{width:220px;height:220px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+    .pubs{margin-top:18px}
+    .pub{background:var(--card);padding:12px;border-radius:10px;margin-bottom:10px;box-shadow:var(--shadow)}
+
+    /* contact */
+    .contact{display:flex;gap:18px;margin-top:22px}
+    form{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow);flex:1}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef2;margin-bottom:12px}
+
+    footer{margin-top:26px;padding:18px 0;color:var(--muted);text-align:center}
+
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)} .about{flex-direction:column} .hero{flex-direction:column} nav{display:none}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr} .hero-right{width:100%}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">ع</div>
+        <div>
+          <div style="font-weight:800">عوض بن حاسوم الدرمكي</div>
+          <div style="font-size:12px;color:var(--muted)">كاتب، شاعر، ومتحدث تحفيزي — محفظة أعمال</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#works">أعمال</a>
+        <a href="#publications">مؤلفات</a>
+        <a href="#events">أمسيات</a>
+        <a href="#contact">تواصل</a>
+        <a class="btn" href="#contact">احجز الآن</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>مرحبًا، أنا عوض بن حاسوم الدرمكي</h1>
+        <p class="lead">أكتب الشعر، أنشر الأفكار، وأقدّم محاضرات تحفيزية وورش عمل. فيما يلي مجموعة مختارة من أعمالي ومشاريعي المنشورة.</p>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#contact">تواصل معي</a>
+          <a href="/CV-Awadhassoum.pdf" class="filter">تحميل السيرة الذاتية (PDF)</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://source.unsplash.com/400x400/?portrait,writer" alt="عوض بن حاسوم" style="width:100%;border-radius:12px;object-fit:cover;box-shadow:var(--shadow)"/>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2 style="margin-top:20px">أعمال مختارة</h2>
+      <div class="controls" role="toolbar" aria-label="فلترة الأعمال">
+        <button class="filter" data-filter="all">الكل</button>
+        <button class="filter" data-filter="poetry">شعر</button>
+        <button class="filter" data-filter="essays">مقالات</button>
+        <button class="filter" data-filter="events">أمسيات</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- Example items: استبدل أو أضف عناصر حقيقية لاحقًا -->
+        <div class="card" data-type="poetry">
+          <img src="https://source.unsplash.com/600x400/?poetry,book" alt="ديوان 1">
+          <h4>ديوان: همسات العصر</h4>
+          <p>مجموعة شعرية تتناول الزمن والحنين.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+        <div class="card" data-type="essays">
+          <img src="https://source.unsplash.com/600x400/?essay,writing" alt="مقال">
+          <h4>مقال: لغة التأثير</h4>
+          <p>سرد تحليلي لأثر الكلمة في المجتمع.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+        <div class="card" data-type="events">
+          <img src="https://source.unsplash.com/600x400/?stage,poetry" alt="أمسية">
+          <h4>أمسية: على ضفاف الليل</h4>
+          <p>أمسية شعرية حية أمام جمهور متحمس.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+        <div class="card" data-type="poetry">
+          <img src="https://source.unsplash.com/600x400/?book,poems" alt="ديوان 2">
+          <h4>مختارات من القلب</h4>
+          <p>سلسلة قصائد قصيرة عن الحياة اليومية.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+        <div class="card" data-type="essays">
+          <img src="https://source.unsplash.com/600x400/?journal,article" alt="مقال 2">
+          <h4>زوايا فكرية</h4>
+          <p>مقالات قصیرة في الثقافة والتربية.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+        <div class="card" data-type="events">
+          <img src="https://source.unsplash.com/600x400/?audience,lecture" alt="حدث">
+          <h4>ورشة: قوة الكلمة</h4>
+          <p>ورشة تفاعلية لتطوير مهارات الإلقاء.</p>
+          <div style="margin-top:8px"><button class="btn" onclick="openModal(this)">عرض</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for item details -->
+    <div class="modal" id="modal" role="dialog" aria-hidden="true">
+      <div class="inner" role="document">
+        <button onclick="closeModal()" style="float:left;background:none;border:none;font-weight:800;font-size:18px">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <section id="publications" class="pubs">
+      <h2 style="margin-top:20px">المؤلفات</h2>
+      <div class="pub">
+        <h4>همسات العصر — ديوان شعر</h4>
+        <p class="muted">سنة الإصدار: 2023 — دار النشر: كلمات</p>
+      </div>
+      <div class="pub">
+        <h4>لغة التأثير — مجموعة مقالات</h4>
+        <p class="muted">سنة الإصدار: 2021 — منشور إلكتروني</p>
+      </div>
+    </section>
+
+    <section id="events" style="margin-top:18px">
+      <h2>الأمسيات والفعاليات</h2>
+      <div class="pub">
+        <h4>أمسية: على ضفاف الليل</h4>
+        <p class="muted">تاريخ: 15 مايو 2024 — المكان: المسرح الوطني</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <form onsubmit="submitForm(event)">
+        <h3>تواصل</h3>
+        <label for="name">الاسم</label>
+        <input id="name" required placeholder="اسمك" />
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" type="email" required placeholder="email@example.com" />
+        <label for="message">الرسالة</label>
+        <textarea id="message" rows="5" placeholder="اكتب رسالتك..."></textarea>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn" type="submit">إرسال</button>
+          <div class="muted" id="status"></div>
+        </div>
+      </form>
+      <aside style="width:320px">
+        <div style="background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow)">
+          <h4>معلومات التواصل</h4>
+          <p class="muted">هاتف: +971 50 000 0000<br/>البريد: info@awadhassoum.com</p>
+          <div style="margin-top:10px"><a class="btn" href="tel:+971500000000">اتصل الآن</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>© جميع الحقوق محفوظة — عوض بن حاسوم الدرمكي</footer>
+  </div>
+
+  <script>
+    // Filtering
+    document.querySelectorAll('.filter').forEach(btn => {
+      btn.addEventListener('click', ()=>{
+        const f = btn.getAttribute('data-filter');
+        document.querySelectorAll('.card').forEach(card=>{
+          if(!f || f==='all') { card.style.display='block'; return; }
+          card.style.display = card.getAttribute('data-type')===f ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Modal open
+    function openModal(btn){
+      const card = btn.closest('.card');
+      const title = card.querySelector('h4').innerText;
+      const desc = card.querySelector('p').innerText;
+      const imgSrc = card.querySelector('img').src;
+      const content = `\n        <h3 style=\"margin-top:0\">${title}</h3>\n        <img src=\"${imgSrc}\" alt=\"${title}\"/>\n        <p class=\"muted\" style=\"margin-top:8px\">${desc}</p>\n        <div style=\"margin-top:12px;display:flex;gap:8px\">\n          <a class=\"btn\" href=\"#contact\">احجز/تواصل</a>\n          <a class=\"filter\" href=\"#\">مشاركة</a>\n        </div>`;
+      document.getElementById('modal-content').innerHTML = content;
+      const modal = document.getElementById('modal');
+      modal.style.display='flex';
+      modal.setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      const modal = document.getElementById('modal');
+      modal.style.display='none';
+      modal.setAttribute('aria-hidden','true');
+    }
+
+    // Contact form (simulate)
+    function submitForm(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const msg=document.getElementById('message').value.trim();
+      const status=document.getElementById('status');
+      status.textContent='جاري الإرسال...';
+      setTimeout(()=>{ status.textContent='تم الإرسال! شكرًا لتواصلك.'; document.querySelector('form').reset(); },900);
+    }
+  </script>
+</body>
+</html>
