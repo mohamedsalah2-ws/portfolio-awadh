@@ -3,60 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بورتفوليو | عوض بن حاسوم الدرمكي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <title>عوض بن حاسوم الدرمكي</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- الهيدر -->
   <header>
-    <h1>عوض بن حاسوم الدرمكي</h1>
-    <p>شاعر | كاتب | محاضر</p>
-    <a href="#portfolio" class="btn">استعرض الأعمال</a>
-    <a href="CV-Awadhassoum.pdf" class="btn">حمّل السيرة الذاتية</a>
+    <div class="container">
+      <h1>عوض بن حاسوم الدرمكي</h1>
+      <p>شاعر · كاتب · متحدث</p>
+      
+     
+
+
+    </div>
   </header>
 
+  <!-- النبذة -->
+  <section id="about">
+    <div class="container">
+      <h2>نبذة</h2>
+      <p>
+        عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز، عُرف بمقالاته الفكرية 
+        ومحاضراته المؤثرة وأمسياته الشعرية التي لامست قلوب الجمهور.
+      </p>
+      <!-- ضع صورتك هنا -->
+      <img src="images/awad1.jpg" alt="عوض بن حاسوم الدرمكي" class="profile-img">
+
+    </div>
+  </section>
+
+  <!-- الأعمال -->
   <section id="portfolio">
-    <h2>الأعمال المختارة</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="قصيدة">
-        <div class="overlay">قصيدة شعرية</div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=800&q=80" alt="مقال">
-        <div class="overlay">مقال فكري</div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="أمسية">
-        <div class="overlay">أمسية شعرية</div>
+    <div class="container">
+      <h2>الأعمال المختارة</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank">
+            <img src="https://img.youtube.com/vi/sFsbicMyXcw/hqdefault.jpg" alt="بصمات 1">
+            <div class="overlay">📺 بصمات 1 – لماذا نقرأ التاريخ؟</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank">
+            <img src="https://img.youtube.com/vi/tt7aif0GzEc/hqdefault.jpg" alt="الملاذ الأخير">
+            <div class="overlay">📺 الملاذ الأخير للبشرية</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.albayan.ae/author/2115" target="_blank">
+            <img src="https://i.ibb.co/zn5frjK/al-bayan-logo.png" alt="البيان">
+            <div class="overlay">📰 مقالات – صحيفة البيان</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.aletihad.ae/editorial%2Copinion/author/2115" target="_blank">
+            <img src="https://i.ibb.co/j4WRd6d/al-ittihad-logo.png" alt="الاتحاد">
+            <div class="overlay">📰 مقالات – صحيفة الاتحاد</div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- المؤلفات -->
   <section id="books">
-    <h2>المؤلفات</h2>
-    <ul class="list">
-      <li>📖 كتاب: من القلب إلى القلب</li>
-      <li>📖 كتاب: همسات في زمن الضجيج</li>
-      <li>📖 كتاب: على ضفاف المعنى</li>
-    </ul>
+    <div class="container">
+      <h2>المؤلفات</h2>
+      <ul class="list">
+        <li>📖 <a href="#" target="_blank">من القلب إلى القلب (مقالات مختارة)</a></li>
+        <li>📖 <a href="#" target="_blank">همسات في زمن الضجيج (كتابات فكرية)</a></li>
+      </ul>
+    </div>
   </section>
 
+  <!-- الأمسيات -->
   <section id="events">
-    <h2>الأمسيات</h2>
-    <ul class="list">
-      <li>🎤 أمسية شعرية – أبوظبي 2023</li>
-      <li>🎤 أمسية أدبية – دبي 2022</li>
-      <li>🎤 ورشة كتابة – الشارقة 2021</li>
-    </ul>
+    <div class="container">
+      <h2>الأمسيات</h2>
+      <ul class="list">
+        <li>🎤 <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank">أمسية "بصمات" – أبوظبي</a></li>
+        <li>🎤 <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank">محاضرة "الملاذ الأخير للبشرية"</a></li>
+      </ul>
+    </div>
   </section>
 
-  <footer>
-    <p>© جميع الحقوق محفوظة — عوض بن حاسوم الدرمكي</p>
-    <div>
-      <a href="#">فيسبوك</a> |
-      <a href="#">تويتر</a> |
-      <a href="#">لينكدإن</a>
+  <!-- الفوتر -->
+ <footer>
+    <p>© 2025 جميع الحقوق محفوظة لعوض بن حاسوم الدرمكي</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/awad" target="_blank" aria-label="Facebook">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+</a>
+
+
+      <a href="hhttps://x.com/awadaldarmaki" target="_blank" aria-label="تويتر">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+      </a>
+      <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank" aria-label="يوتيوب">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="لينكدإن">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="إنستجرام">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+      </a>
     </div>
   </footer>
 </body>
