@@ -11,22 +11,21 @@
 
   <!-- Header -->
   <header class="navbar">
-    <div class="container">
-      <h1 class="logo">عوض</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#hero">الرئيسية</a></li>
-          <li><a href="#about">نبذة</a></li>
-          <li><a href="#portfolio">الأعمال</a></li>
-          <li><a href="#books">المؤلفات</a></li>
-          <li><a href="#contact">تواصل</a></li>
-        </ul>
-      </nav>
-      <!-- زر تغيير الوضع -->
-      <button id="theme-toggle" aria-label="تغيير الوضع">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+<div class="container header-flex">
+    <!-- صورة -->
+    <img src="images/awad1.jpg" alt="Awad Al Darmaki" class="logo">
+
+    <!-- الاسم -->
+    <div class="titles">
+      <h1 lang="ar">عوض بن حاسوم الدرمكي</h1>
+      <h1 lang="en" class="hidden">Awad Al Darmaki</h1>
+      <p lang="ar">شاعر · كاتب · متحدث</p>
+      <p lang="en" class="hidden">Poet · Writer · Speaker</p>
     </div>
+
+    <!-- زر تبديل اللغة -->
+    <button id="lang-toggle">EN</button>
+  </div>
   </header>
 
   <!-- Hero -->
@@ -90,12 +89,13 @@
     <div class="container">
       <h2>تواصل معي</h2>
       <p>تابعني أو راسلني عبر المنصات التالية:</p>
-      <div class="socials">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
+       <div class="social-links">
+    <a href="https://www.facebook.com/awad" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+    <a href="https://x.com/awadaldarmaki" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+    <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+    <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+    <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+  </div>
     </div>
   </section>
 
@@ -107,3 +107,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
