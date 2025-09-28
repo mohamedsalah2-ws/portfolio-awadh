@@ -1,39 +1,41 @@
+// script.js (استبدل كامل الملف بهذا)
 const langToggle = document.getElementById("lang-toggle");
-const themeToggle = document.getElementById("theme-toggle");
+const htmlEl = document.documentElement; // <html>
 const body = document.body;
 
-// 🔄 تبديل اللغة
-langToggle.addEventListener("click", () => {
-  document.querySelectorAll("[lang]").forEach(el => {
-    el.classList.toggle("hidden");
+// Helper: show only elements with lang === targetLang, hide others (only inside body)
+function setLanguage(targetLang) {
+  // اجعل النصوص داخل الـ body فقط تتغير (لا نلمس html)
+  document.querySelectorAll("body [lang]").forEach(el => {
+    const elLang = el.getAttribute("lang");
+    if (elLang === targetLang) {
+      el.classList.remove("hidden");
+    } else {
+      el.classList.add("hidden");
+    }
   });
 
-  langToggle.textContent = langToggle.textContent === "EN" ? "AR" : "EN";
+  // عدّل خصائص المستند (dir, lang)
+  htmlEl.setAttribute("lang", targetLang);
+  htmlEl.setAttribute("dir", targetLang === "ar" ? "rtl" : "ltr");
 
-  // تغيير اتجاه الصفحة
-  if (document.documentElement.getAttribute("dir") === "rtl") {
-    document.documentElement.setAttribute("dir", "ltr");
-    document.documentElement.setAttribute("lang", "en");
-  } else {
-    document.documentElement.setAttribute("dir", "rtl");
-    document.documentElement.setAttribute("lang", "ar");
-  }
-});
+  // غيّر نص زر التبديل
+  langToggle.textContent = targetLang === "ar" ? "EN" : "AR";
 
-// 🌙 تبديل الوضع
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  body.classList.toggle("light");
-
-  themeToggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
-
-  // حفظ الاختيار
-  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
-});
-
-// تحميل الوضع المحفوظ
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  body.classList.remove("light");
-  themeToggle.textContent = "☀️";
+  // خزّن الاختيار
+  localStorage.setItem("siteLang", targetLang);
 }
+
+// عند الضغط على زر اللغة: أقرا اللغة الحالية وانتقل للأخرى
+langToggle.addEventListener("click", () => {
+  const currentLang = htmlEl.getAttribute("lang") === "en" ? "en" : "ar";
+  const nextLang = currentLang === "ar" ? "en" : "ar";
+  setLanguage(nextLang);
+});
+
+// INIT عند التحميل: استخدم القيمة المخزنة أو القيمة الافتراضية من <html>
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("siteLang");
+  const initial = saved ? saved : (htmlEl.getAttribute("lang") === "en" ? "en" : "ar");
+  setLanguage(initial);
+});
