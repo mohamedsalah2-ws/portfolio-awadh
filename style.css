@@ -3,13 +3,31 @@ body {
   margin: 0;
   font-family: "Cairo", sans-serif;
   line-height: 1.6;
-  background: #fafafa;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* Light & Dark Theme Vars */
+:root {
+  --bg: #fafafa;
+  --text: #333;
+  --card-bg: #fff;
+  --header-bg: linear-gradient(90deg, #6dc1e5, #fccf00);
+  --footer-bg: #333;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f0f0f0;
+  --card-bg: #2a2a2a;
+  --header-bg: linear-gradient(90deg, #333, #666);
+  --footer-bg: #111;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #6dc1e5, #fccf00);
+  background: var(--header-bg);
   color: white;
   padding: 20px 0;
 }
@@ -29,14 +47,20 @@ header {
   border: 3px solid #fff;
 }
 
-#lang-toggle {
+.controls button {
   padding: 6px 12px;
   border: none;
-  background: white;
-  color: #333;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  margin-left: 6px;
+  background: white;
+  color: #333;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  opacity: 0.8;
 }
 
 /* Sections */
@@ -57,11 +81,12 @@ h2 {
 }
 
 .card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
 .card img {
@@ -90,10 +115,14 @@ h2 {
 
 /* Footer */
 footer {
-  background: #333;
+  background: var(--footer-bg);
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+.social-links {
+  margin-top: 10px;
 }
 
 .social-links img {
@@ -107,9 +136,7 @@ footer {
   transform: scale(1.2);
 }
 
-
 /* Hidden class */
 .hidden {
   display: none !important;
 }
-
