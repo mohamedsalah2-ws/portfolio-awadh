@@ -1,130 +1,118 @@
+/* Reset */
 body {
   margin: 0;
   font-family: "Cairo", sans-serif;
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  background: #fafafa;
+  color: #333;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  max-width: 1100px;
+/* Header */
+header {
+  background: linear-gradient(90deg, #6dc1e5, #fccf00);
+  color: white;
+  padding: 20px 0;
 }
 
-/* الوضع الفاتح */
-body.light {
-  background: #f9f9f9;
-  color: #222;
-}
-
-/* الوضع الداكن */
-body.dark {
-  background: #121212;
-  color: #ddd;
-}
-
-/* هيدر */
 .header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  gap: 20px;
 }
 
-.logo {
+.profile-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
 }
 
-.titles h1, .titles p {
-  margin: 0;
-}
-
-.controls button {
-  padding: 8px 12px;
+#lang-toggle {
+  padding: 6px 12px;
   border: none;
-  border-radius: 8px;
-  margin-left: 5px;
-  background: #6dc1e5;
-  color: #fff;
+  background: white;
+  color: #333;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: bold;
 }
 
-.controls button:hover {
-  background: #44a3c7;
+/* Sections */
+section {
+  padding: 40px 20px;
 }
 
-/* أقسام */
 h2 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #6dc1e5;
-  display: inline-block;
-  padding-bottom: 5px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+/* Portfolio */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .card img {
   width: 100%;
-  display: block;
-  transition: transform 0.3s;
-}
-
-.card:hover img {
-  transform: scale(1.1);
-}
-
-.card .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 10px;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* الفوتر */
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background: #f1f1f1;
-}
-
-body.dark footer {
-  background: #1e1e1e;
-}
-
-footer .social-links {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 10px;
 }
 
-footer .social-links a img {
-  width: 30px;
+.card a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #6dc1e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background: #fccf00;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 28px;
   margin: 0 8px;
-  transition: transform 0.3s;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
 }
 
-footer .social-links a img:hover {
-  transform: scale(1.2);
+.social-links img:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0);
 }
 
+/* Hidden class */
 .hidden {
-  display: none;
+  display: none !important;
 }
