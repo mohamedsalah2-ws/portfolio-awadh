@@ -22,33 +22,103 @@
         <p lang="en" class="hidden">Poet · Writer · Speaker</p>
       </div>
 
-      <!-- زر تبديل اللغة -->
-      <button id="lang-toggle">EN</button>
-    </div>
-
-    <!-- روابط التواصل -->
-    <div class="social-links">
-      <a href="https://www.facebook.com/awad" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-      <a href="https://x.com/awadaldarmaki" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
-      <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <!-- أزرار -->
+      <div class="controls">
+        <button id="lang-toggle">EN</button>
+        <button id="theme-toggle">🌙</button>
+      </div>
     </div>
   </header>
 
-  <!-- محتوى تجريبي -->
+  <!-- النبذة -->
   <main class="container">
-    <section>
+    <section id="about">
       <h2 lang="ar">نبذة</h2>
       <h2 lang="en" class="hidden">About</h2>
-      <p lang="ar">عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي...</p>
-      <p lang="en" class="hidden">Awad Al Darmaki is a renowned Emirati poet...</p>
+      <p lang="ar">
+        عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز، عُرف بمقالاته الفكرية
+        ومحاضراته المؤثرة وأمسياته الشعرية التي لامست قلوب الجمهور.
+      </p>
+      <p lang="en" class="hidden">
+        Awad Al Darmaki is a renowned Emirati poet, writer, and speaker,
+        celebrated for his thought-provoking articles, impactful lectures, 
+        and poetic evenings that touched hearts.
+      </p>
+    </section>
+
+    <!-- الأعمال -->
+    <section id="portfolio">
+      <h2 lang="ar">الأعمال المختارة</h2>
+      <h2 lang="en" class="hidden">Selected Works</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank">
+            <img src="https://img.youtube.com/vi/sFsbicMyXcw/hqdefault.jpg" alt="بصمات 1">
+            <div class="overlay">📺 بصمات 1 – لماذا نقرأ التاريخ؟</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank">
+            <img src="https://img.youtube.com/vi/tt7aif0GzEc/hqdefault.jpg" alt="الملاذ الأخير">
+            <div class="overlay">📺 الملاذ الأخير للبشرية</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.albayan.ae/author/2115" target="_blank">
+            <img src="https://i.ibb.co/zn5frjK/al-bayan-logo.png" alt="البيان">
+            <div class="overlay">📰 مقالات – صحيفة البيان</div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.aletihad.ae/editorial%2Copinion/author/2115" target="_blank">
+            <img src="https://i.ibb.co/j4WRd6d/al-ittihad-logo.png" alt="الاتحاد">
+            <div class="overlay">📰 مقالات – صحيفة الاتحاد</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- المؤلفات -->
+    <section id="books">
+      <h2 lang="ar">المؤلفات</h2>
+      <h2 lang="en" class="hidden">Books</h2>
+      <ul class="list">
+        <li>📖 
+          <a href="https://www.albayan.ae/author/2115" target="_blank">
+            من القلب إلى القلب (مقالات مختارة)
+          </a>
+        </li>
+        <li>📖 
+          <a href="https://www.aletihad.ae/editorial%2Copinion/author/2115" target="_blank">
+            همسات في زمن الضجيج (كتابات فكرية)
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- الأمسيات -->
+    <section id="events">
+      <h2 lang="ar">الأمسيات</h2>
+      <h2 lang="en" class="hidden">Events</h2>
+      <ul class="list">
+        <li>🎤 <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank">أمسية "بصمات" – أبوظبي</a></li>
+        <li>🎤 <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank">محاضرة "الملاذ الأخير للبشرية"</a></li>
+      </ul>
     </section>
   </main>
 
   <!-- الفوتر -->
   <footer>
-    <p>© 2025 جميع الحقوق محفوظة | All rights reserved</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/awad" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://x.com/awadaldarmaki" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+      <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+      <a href="https://www.albayan.ae/author/2115" target="_blank"><img src="icons/news.png" alt="Al Bayan"></a>
+      <a href="https://www.aletihad.ae/editorial%2Copinion/author/2115" target="_blank"><img src="icons/news2.png" alt="Al Ittihad"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+    </div>
+    <p>© 2025 جميع الحقوق محفوظة لعوض بن حاسوم الدرمكي | All rights reserved</p>
   </footer>
 
   <script src="script.js"></script>
