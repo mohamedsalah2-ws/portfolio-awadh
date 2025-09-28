@@ -2,12 +2,25 @@ body {
   margin: 0;
   font-family: "Cairo", sans-serif;
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
   width: 90%;
   margin: auto;
   max-width: 1100px;
+}
+
+/* الوضع الفاتح */
+body.light {
+  background: #f9f9f9;
+  color: #222;
+}
+
+/* الوضع الداكن */
+body.dark {
+  background: #121212;
+  color: #ddd;
 }
 
 /* هيدر */
@@ -28,42 +41,88 @@ body {
   margin: 0;
 }
 
-#lang-toggle {
-  padding: 8px 15px;
+.controls button {
+  padding: 8px 12px;
   border: none;
   border-radius: 8px;
+  margin-left: 5px;
   background: #6dc1e5;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-#lang-toggle:hover {
+.controls button:hover {
   background: #44a3c7;
 }
 
-/* روابط السوشيال */
-.social-links {
-  margin-top: 10px;
+/* أقسام */
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #6dc1e5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
   text-align: center;
 }
 
-.social-links a img {
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #f1f1f1;
+}
+
+body.dark footer {
+  background: #1e1e1e;
+}
+
+footer .social-links {
+  margin-bottom: 10px;
+}
+
+footer .social-links a img {
   width: 30px;
   margin: 0 8px;
   transition: transform 0.3s;
 }
 
-.social-links a img:hover {
+footer .social-links a img:hover {
   transform: scale(1.2);
-}
-
-/* فوتر */
-footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  background: #f1f1f1;
 }
 
 .hidden {
