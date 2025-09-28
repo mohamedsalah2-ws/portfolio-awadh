@@ -96,23 +96,20 @@ footer {
   padding: 20px;
 }
 
-.social-links {
-  margin-top: 10px;
-}
-
 .social-links img {
-  width: 28px;
+  width: 32px;
+  height: 32px;
   margin: 0 8px;
-  filter: brightness(0) invert(1);
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .social-links img:hover {
-  transform: scale(1.1);
-  filter: brightness(1) invert(0);
+  transform: scale(1.2);
 }
+
 
 /* Hidden class */
 .hidden {
   display: none !important;
 }
+
