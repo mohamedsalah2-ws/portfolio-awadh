@@ -1,103 +1,199 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>عوض بن حاسوم الدرمكي | Awad Al Darmaki</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <!-- الهيدر -->
+<body class="light">
+
+  <!-- HEADER -->
   <header>
     <div class="container header-flex">
-      <img src="images/awad1.jpg" alt="عوض بن حاسوم الدرمكي" class="profile-img">
-      <div>
-        <h1 lang="ar">عوض بن حاسوم الدرمكي</h1>
-        <h1 lang="en" class="hidden">Awad Al Darmaki</h1>
-        <p lang="ar">شاعر · كاتب · متحدث</p>
-        <p lang="en" class="hidden">Poet · Writer · Speaker</p>
+      <div class="left">
+        <img src="images/awad1.jpg" alt="عوض بن حاسوم الدرمكي" class="profile-img">
+        <div class="titles">
+          <h1 class="title-ar">عوض بن حاسوم الدرمكي</h1>
+          <h1 class="title-en hidden">Awad Al Darmaki</h1>
+          <p class="role-ar">شاعر · كاتب · متحدث</p>
+          <p class="role-en hidden">Poet · Writer · Speaker</p>
+        </div>
       </div>
+
       <div class="controls">
-        <button id="lang-toggle">EN</button>
-        <button id="theme-toggle">🌙</button>
+        <button id="lang-toggle" class="btn">EN</button>
+        <button id="theme-toggle" class="btn">🌙</button>
       </div>
     </div>
   </header>
 
-  <!-- من أنا -->
-  <section id="about">
-    <div class="container">
-      <h2 lang="ar">نبذة</h2>
-      <h2 lang="en" class="hidden">About</h2>
-      <p lang="ar">
-        عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز، عُرف بمقالاته الفكرية 
-        ومحاضراته المؤثرة وأمسياته الشعرية التي لامست قلوب الجمهور.
-      </p>
-      <p lang="en" class="hidden">
-        Awad Al Darmaki, a prominent Emirati poet and writer, is well-known for his 
-        thought-provoking articles, inspiring lectures, and poetry evenings that touched hearts.
-      </p>
-    </div>
-  </section>
+  <!-- ABOUT -->
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="lang lang-ar">
+          <h2>نبذة</h2>
+          <p>
+            عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز،
+            عُرف بمقالاته الفكرية، محاضراته المؤثرة، وأمسياته الشعرية التي لامست قلوب الجمهور.
+          </p>
+        </div>
 
-  <!-- الأعمال -->
-  <section class="portfolio">
-    <h2 lang="ar">الأعمال</h2>
-    <h2 lang="en" class="hidden">My Works</h2>
-
-    <div class="portfolio-grid">
-      <div class="card">
-        <img src="images/book1.jpg" alt="كتاب">
-        <h3 lang="ar">ديوان شعري</h3>
-        <h3 lang="en" class="hidden">Poetry Collection</h3>
-        <p lang="ar">مجموعة من القصائد التي تعكس الإحساس العميق والكلمة الراقية.</p>
-        <p lang="en" class="hidden">A collection of poems reflecting deep emotions and refined words.</p>
-        <a href="#">🔗</a>
+        <div class="lang lang-en hidden">
+          <h2>About</h2>
+          <p>
+            Awad Al Darmaki is a prominent Emirati poet and writer,
+            known for his thought-provoking articles, inspiring lectures, and poetry evenings that touched hearts.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="images/lecture.jpg" alt="محاضرة">
-        <h3 lang="ar">محاضرة عامة</h3>
-        <h3 lang="en" class="hidden">Public Lecture</h3>
-        <p lang="ar">محاضرات ملهمة حول الثقافة والأدب والهوية.</p>
-        <p lang="en" class="hidden">Inspiring lectures on culture, literature, and identity.</p>
-        <a href="#">🔗</a>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="lang lang-ar">
+          <h2>الأعمال المختارة</h2>
+          <div class="portfolio-grid">
+            <article class="card">
+              <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank" rel="noopener">
+                <img src="https://img.youtube.com/vi/sFsbicMyXcw/hqdefault.jpg" alt="بصمات 1">
+                <div class="overlay">📺 بصمات 1 – لماذا نقرأ التاريخ؟</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank" rel="noopener">
+                <img src="https://img.youtube.com/vi/tt7aif0GzEc/hqdefault.jpg" alt="الملاذ الأخير">
+                <div class="overlay">📺 الملاذ الأخير للبشرية</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.albayan.ae/author/2115" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/zn5frjK/al-bayan-logo.png" alt="البيان">
+                <div class="overlay">📰 مقالات – صحيفة البيان</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.aletihad.ae/editorial,opinion/author/2115" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/j4WRd6d/al-ittihad-logo.png" alt="الاتحاد">
+                <div class="overlay">📰 مقالات – صحيفة الاتحاد</div>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="lang lang-en hidden">
+          <h2>Featured Works</h2>
+          <div class="portfolio-grid">
+            <article class="card">
+              <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank" rel="noopener">
+                <img src="https://img.youtube.com/vi/sFsbicMyXcw/hqdefault.jpg" alt="Basamat 1">
+                <div class="overlay">📺 Basamat 1 – Why Read History?</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank" rel="noopener">
+                <img src="https://img.youtube.com/vi/tt7aif0GzEc/hqdefault.jpg" alt="The Last Refuge">
+                <div class="overlay">📺 The Last Refuge for Humanity</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.albayan.ae/author/2115" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/zn5frjK/al-bayan-logo.png" alt="Al Bayan">
+                <div class="overlay">📰 Articles – Al Bayan Newspaper</div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.aletihad.ae/editorial,opinion/author/2115" target="_blank" rel="noopener">
+                <img src="https://i.ibb.co/j4WRd6d/al-ittihad-logo.png" alt="Al Ittihad">
+                <div class="overlay">📰 Articles – Al Ittihad Newspaper</div>
+              </a>
+            </article>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="images/media.jpg" alt="مقابلة إعلامية">
-        <h3 lang="ar">مقابلة إعلامية</h3>
-        <h3 lang="en" class="hidden">Media Interview</h3>
-        <p lang="ar">لقاءات تلفزيونية وإذاعية مع جمهور واسع.</p>
-        <p lang="en" class="hidden">TV and radio interviews reaching a wide audience.</p>
-        <a href="#">🔗</a>
+    <!-- BOOKS -->
+    <section id="books" class="section">
+      <div class="container">
+        <div class="lang lang-ar">
+          <h2>المؤلفات</h2>
+          <ul class="list">
+            <li>📖 من القلب إلى القلب (مقالات مختارة) — <a href="https://www.albayan.ae/author/2115" target="_blank" rel="noopener">اقرأ</a></li>
+            <li>📖 همسات في زمن الضجيج (كتابات فكرية) — <a href="https://www.aletihad.ae/editorial,opinion/author/2115" target="_blank" rel="noopener">اقرأ</a></li>
+          </ul>
+        </div>
+
+        <div class="lang lang-en hidden">
+          <h2>Books</h2>
+          <ul class="list">
+            <li>📖 From Heart to Heart (Selected Articles) — <a href="https://www.albayan.ae/author/2115" target="_blank" rel="noopener">Read</a></li>
+            <li>📖 Whispers in the Time of Noise (Thoughts & Essays) — <a href="https://www.aletihad.ae/editorial,opinion/author/2115" target="_blank" rel="noopener">Read</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- الفوتر -->
+    <!-- EVENTS -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="lang lang-ar">
+          <h2>الأمسيات والمحاضرات</h2>
+          <ul class="list">
+            <li>🎤 أمسية "بصمات" – <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank" rel="noopener">شاهد</a></li>
+            <li>🎤 محاضرة "الملاذ الأخير للبشرية" – <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank" rel="noopener">شاهد</a></li>
+          </ul>
+        </div>
+
+        <div class="lang lang-en hidden">
+          <h2>Events & Lectures</h2>
+          <ul class="list">
+            <li>🎤 "Basamat" Evening – <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank" rel="noopener">Watch</a></li>
+            <li>🎤 Lecture: "The Last Refuge for Humanity" – <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank" rel="noopener">Watch</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 جميع الحقوق محفوظة | All rights reserved</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/awad" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
-      </a>
-      <a href="https://x.com/awadaldarmaki" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Twitter / X">
-      </a>
-      <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-      </a>
-      <a href="https://linkedin.com" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
-      </a>
-      <a href="https://instagram.com" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-      </a>
+    <div class="container">
+      <p>© 2025 جميع الحقوق محفوظة | All rights reserved</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/awad" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/awadaldarmaki" target="_blank" aria-label="Twitter">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Twitter">
+        </a>
+        <a href="https://www.youtube.com/channel/UCcKLAdRjY7fE4_hWSkZix0Q" target="_blank" aria-label="YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+        </a>
+        <a href="https://www.albayan.ae/author/2115" target="_blank" aria-label="AlBayan">
+          <img src="https://i.ibb.co/zn5frjK/al-bayan-logo.png" alt="AlBayan" style="height:32px">
+        </a>
+        <a href="https://www.aletihad.ae/editorial,opinion/author/2115" target="_blank" aria-label="AlIttihad">
+          <img src="https://i.ibb.co/j4WRd6d/al-ittihad-logo.png" alt="AlIttihad" style="height:32px">
+        </a>
+        <a href="https://www.linkedin.com/in/awadaldarmaki/" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/awadaldarmaki/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+        </a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
-
