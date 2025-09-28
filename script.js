@@ -1,43 +1,43 @@
-const langToggle = document.getElementById("lang-toggle");
-const themeToggle = document.getElementById("theme-toggle");
-const htmlEl = document.documentElement;
+// عناصر
+const body = document.body;
+const themeBtn = document.getElementById("theme-toggle");
+const langBtn = document.getElementById("lang-toggle");
 
-// 🔹 تغيير اللغة
-function setLanguage(targetLang) {
-  document.querySelectorAll("body [lang]").forEach(el => {
-    const elLang = el.getAttribute("lang");
-    el.classList.toggle("hidden", elLang !== targetLang);
-  });
-
-  htmlEl.setAttribute("lang", targetLang);
-  htmlEl.setAttribute("dir", targetLang === "ar" ? "rtl" : "ltr");
-
-  langToggle.textContent = targetLang === "ar" ? "EN" : "AR";
-  localStorage.setItem("siteLang", targetLang);
+// تحميل الوضع المحفوظ
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+} else {
+  body.classList.add("light");
 }
 
-langToggle.addEventListener("click", () => {
-  const currentLang = htmlEl.getAttribute("lang") === "en" ? "en" : "ar";
-  setLanguage(currentLang === "ar" ? "en" : "ar");
+// تبديل الوضع
+themeBtn.addEventListener("click", () => {
+  if (body.classList.contains("light")) {
+    body.classList.replace("light", "dark");
+    localStorage.setItem("theme", "dark");
+    themeBtn.textContent = "☀️";
+  } else {
+    body.classList.replace("dark", "light");
+    localStorage.setItem("theme", "light");
+    themeBtn.textContent = "🌙";
+  }
 });
 
-// 🔹 تغيير الثيم
-function setTheme(mode) {
-  document.body.classList.toggle("dark", mode === "dark");
-  themeToggle.textContent = mode === "dark" ? "☀️" : "🌙";
-  localStorage.setItem("siteTheme", mode);
-}
-
-themeToggle.addEventListener("click", () => {
-  const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
-  setTheme(newTheme);
-});
-
-// 🔹 تهيئة عند التحميل
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("siteLang") || "ar";
-  const savedTheme = localStorage.getItem("siteTheme") || "light";
-
-  setLanguage(savedLang);
-  setTheme(savedTheme);
+// تبديل اللغة
+langBtn.addEventListener("click", () => {
+  const ar = document.querySelectorAll(".lang-ar");
+  const en = document.querySelectorAll(".lang-en");
+  if (body.getAttribute("dir") === "rtl") {
+    body.setAttribute("dir", "ltr");
+    body.setAttribute("lang", "en");
+    ar.forEach(el => el.classList.add("hidden"));
+    en.forEach(el => el.classList.remove("hidden"));
+    langBtn.textContent = "العربية";
+  } else {
+    body.setAttribute("dir", "rtl");
+    body.setAttribute("lang", "ar");
+    en.forEach(el => el.classList.add("hidden"));
+    ar.forEach(el => el.classList.remove("hidden"));
+    langBtn.textContent = "English";
+  }
 });
