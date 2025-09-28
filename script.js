@@ -1,37 +1,43 @@
 const langToggle = document.getElementById("lang-toggle");
+const themeToggle = document.getElementById("theme-toggle");
 const htmlEl = document.documentElement;
 
-// Helper: show only elements with targetLang
+// 🔹 تغيير اللغة
 function setLanguage(targetLang) {
   document.querySelectorAll("body [lang]").forEach(el => {
     const elLang = el.getAttribute("lang");
-    if (elLang === targetLang) {
-      el.classList.remove("hidden");
-    } else {
-      el.classList.add("hidden");
-    }
+    el.classList.toggle("hidden", elLang !== targetLang);
   });
 
-  // adjust document direction
   htmlEl.setAttribute("lang", targetLang);
   htmlEl.setAttribute("dir", targetLang === "ar" ? "rtl" : "ltr");
 
-  // change button text
   langToggle.textContent = targetLang === "ar" ? "EN" : "AR";
-
-  // save selection
   localStorage.setItem("siteLang", targetLang);
 }
 
 langToggle.addEventListener("click", () => {
   const currentLang = htmlEl.getAttribute("lang") === "en" ? "en" : "ar";
-  const nextLang = currentLang === "ar" ? "en" : "ar";
-  setLanguage(nextLang);
+  setLanguage(currentLang === "ar" ? "en" : "ar");
 });
 
-// init
+// 🔹 تغيير الثيم
+function setTheme(mode) {
+  document.body.classList.toggle("dark", mode === "dark");
+  themeToggle.textContent = mode === "dark" ? "☀️" : "🌙";
+  localStorage.setItem("siteTheme", mode);
+}
+
+themeToggle.addEventListener("click", () => {
+  const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
+  setTheme(newTheme);
+});
+
+// 🔹 تهيئة عند التحميل
 document.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("siteLang");
-  const initial = saved ? saved : (htmlEl.getAttribute("lang") || "ar");
-  setLanguage(initial);
+  const savedLang = localStorage.getItem("siteLang") || "ar";
+  const savedTheme = localStorage.getItem("siteTheme") || "light";
+
+  setLanguage(savedLang);
+  setTheme(savedTheme);
 });
