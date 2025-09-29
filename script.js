@@ -1,22 +1,22 @@
-// زر اللغة
-const langBtn = document.getElementById("lang-toggle");
-langBtn.addEventListener("click", () => {
-  if (langBtn.textContent === "EN") {
-    document.getElementById("name").textContent = "Awadh Al Darmaki";
-    document.getElementById("title").textContent = "Poet · Writer · Speaker";
-    langBtn.textContent = "AR";
-    document.documentElement.setAttribute("dir", "ltr");
-  } else {
-    document.getElementById("name").textContent = "عوض بن حاسوم الدرمكي";
-    document.getElementById("title").textContent = "شاعر · كاتب · متحدث";
-    langBtn.textContent = "EN";
-    document.documentElement.setAttribute("dir", "rtl");
-  }
+// زر تغيير اللغة
+const langToggle = document.getElementById("lang-toggle");
+const modeToggle = document.getElementById("mode-toggle");
+
+let currentLang = "ar";
+
+langToggle.addEventListener("click", () => {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  langToggle.textContent = currentLang === "ar" ? "English" : "عربي";
+
+  document.querySelectorAll("[data-ar]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
 });
 
 // زر الوضع الليلي
-const themeBtn = document.getElementById("theme-toggle");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  themeBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  modeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
