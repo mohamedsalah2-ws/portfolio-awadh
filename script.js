@@ -1,22 +1,43 @@
-// زر تغيير اللغة
-const langToggle = document.getElementById("lang-toggle");
-const modeToggle = document.getElementById("mode-toggle");
-
+// تبديل اللغة
+const langBtn = document.getElementById("langBtn");
 let currentLang = "ar";
 
-langToggle.addEventListener("click", () => {
+const translations = {
+  en: {
+    home: "Home",
+    about: "About",
+    works: "Works",
+    contact: "Contact",
+    welcome: "Welcome to Awad Website",
+    desc: "Here you will find all details about our services and projects.",
+    articles: "Articles & News"
+  },
+  ar: {
+    home: "الرئيسية",
+    about: "من نحن",
+    works: "الأعمال",
+    contact: "تواصل",
+    welcome: "مرحباً بك في موقع عوض",
+    desc: "هنا هتلاقي كل التفاصيل عن خدماتنا وأعمالنا المميزة.",
+    articles: "مقالات وأخبار"
+  }
+};
+
+langBtn.addEventListener("click", () => {
   currentLang = currentLang === "ar" ? "en" : "ar";
   document.documentElement.lang = currentLang;
   document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
-  langToggle.textContent = currentLang === "ar" ? "English" : "عربي";
+  langBtn.textContent = currentLang === "ar" ? "EN" : "AR";
 
-  document.querySelectorAll("[data-ar]").forEach(el => {
-    el.textContent = el.getAttribute(`data-${currentLang}`);
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    const key = el.getAttribute("data-lang");
+    el.textContent = translations[currentLang][key];
   });
 });
 
-// زر الوضع الليلي
-modeToggle.addEventListener("click", () => {
+// تبديل الوضع (فاتح/غامق)
+const themeBtn = document.getElementById("themeBtn");
+themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  modeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
