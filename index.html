@@ -3,84 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عوض بن حاسوم الدرمكي | Awad Al Darmaki</title>
+  <title>موقع عوض</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- الهيدر -->
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content container">
-      <img src="images/profile.jpg" alt="Awad Al Darmaki" class="profile-img">
-      <h1 class="name" data-ar="عوض بن حاسوم الدرمكي" data-en="Awad Al Darmaki">عوض بن حاسوم الدرمكي</h1>
-      <p class="subtitle" data-ar="شاعر · كاتب · متحدث" data-en="Poet · Writer · Speaker">
-        شاعر · كاتب · متحدث
-      </p>
+  <header class="header">
+    <div class="container">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" data-lang="home">الرئيسية</a></li>
+          <li><a href="#about" data-lang="about">من نحن</a></li>
+          <li><a href="#works" data-lang="works">الأعمال</a></li>
+          <li><a href="#contact" data-lang="contact">تواصل</a></li>
+        </ul>
+      </nav>
       <div class="controls">
-        <button id="lang-toggle">English</button>
-        <button id="mode-toggle">🌙</button>
+        <button id="langBtn">EN</button>
+        <button id="themeBtn">🌙</button>
       </div>
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="container">
-    <h2 data-ar="نبذة" data-en="About">نبذة</h2>
-    <p class="about-text" 
-       data-ar="عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز، عُرف بمقالاته الفكرية ومحاضراته المؤثرة وأمسياته الشعرية." 
-       data-en="Awad Al Darmaki is a prominent Emirati poet and writer, known for his thought-provoking articles, inspiring lectures, and poetry evenings.">
-      عوض بن حاسوم الدرمكي، شاعر وكاتب إماراتي بارز، عُرف بمقالاته الفكرية ومحاضراته المؤثرة وأمسياته الشعرية.
-    </p>
+  <!-- القسم الرئيسي -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1 data-lang="welcome">مرحباً بك في موقع عوض</h1>
+      <p data-lang="desc">هنا هتلاقي كل التفاصيل عن خدماتنا وأعمالنا المميزة.</p>
+    </div>
+    <img src="images/hero.jpg" alt="Hero Image" class="hero-img">
   </section>
 
-  <!-- الأعمال -->
-  <section id="works" class="container">
-    <h2 data-ar="الأعمال المختارة" data-en="Featured Works">الأعمال المختارة</h2>
-    <div class="grid">
+  <!-- قسم المقالات -->
+  <section id="works" class="works">
+    <h2 data-lang="articles">مقالات وأخبار</h2>
+    <div class="cards">
       <div class="card">
-        <a href="https://www.youtube.com/watch?v=sFsbicMyXcw" target="_blank">
-          <img src="images/work1.jpg" alt="Basamat">
-          <h3 data-ar="بصمات 1 – لماذا نقرأ التاريخ؟" data-en="Basamat 1 – Why Read History?">
-            بصمات 1 – لماذا نقرأ التاريخ؟
-          </h3>
-        </a>
+        <img src="images/article1.jpg" alt="Article 1">
+        <h3>عنوان المقال الأول</h3>
+        <p>ملخص قصير عن المقال...</p>
       </div>
       <div class="card">
-        <a href="https://www.youtube.com/watch?v=tt7aif0GzEc" target="_blank">
-          <img src="images/work2.jpg" alt="Last Refuge">
-          <h3 data-ar="الملاذ الأخير للبشرية" data-en="The Last Refuge for Humanity">
-            الملاذ الأخير للبشرية
-          </h3>
-        </a>
+        <img src="images/article2.jpg" alt="Article 2">
+        <h3>عنوان المقال الثاني</h3>
+        <p>ملخص قصير عن المقال...</p>
       </div>
       <div class="card">
-        <a href="https://www.albayan.ae/author/2115" target="_blank">
-          <img src="images/albayan.jpg" alt="Al Bayan">
-          <h3 data-ar="مقالات – صحيفة البيان" data-en="Articles – Al Bayan Newspaper">
-            مقالات – صحيفة البيان
-          </h3>
-        </a>
-      </div>
-      <div class="card">
-        <a href="https://www.aletihad.ae/editorial%2Copinion/author/2115" target="_blank">
-          <img src="images/alittihad.jpg" alt="Al Ittihad">
-          <h3 data-ar="مقالات – صحيفة الاتحاد" data-en="Articles – Al Ittihad Newspaper">
-            مقالات – صحيفة الاتحاد
-          </h3>
-        </a>
+        <img src="images/article3.jpg" alt="Article 3">
+        <h3>عنوان المقال الثالث</h3>
+        <p>ملخص قصير عن المقال...</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Awad Al Darmaki</p>
-    <div class="social-links">
-      <a href="https://facebook.com/awad" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://x.com/awadaldarmaki" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+  <!-- الفوتر -->
+  <footer class="footer">
+    <p>© 2025 جميع الحقوق محفوظة - عوض</p>
+    <div class="social">
+      <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
       <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
     </div>
   </footer>
 
