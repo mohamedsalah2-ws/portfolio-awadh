@@ -3,36 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عوض الدرمكي</title>
+  <title>عوض الدرمكي | Awad Al Darmaki</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- شريط التنقل -->
   <header>
     <nav class="navbar">
       <div class="logo">عوض الدرمكي</div>
       <ul class="nav-links">
         <li><a href="#home">الرئيسية</a></li>
         <li><a href="#work">الأعمال</a></li>
+        <li><a href="#quote">رسالة</a></li>
         <li><a href="#contact">تواصل</a></li>
-        <li>
-          <button id="darkToggle" class="dark-btn">🌙</button>
-        </li>
+        <li><button id="darkToggle" class="dark-btn">🌙</button></li>
       </ul>
     </nav>
   </header>
 
+  <!-- قسم المقدمة -->
   <section id="home" class="hero">
     <div class="hero-text">
       <h1>مرحباً، أنا <span>عوض الدرمكي</span></h1>
-      <p>كاتب ومتحدث تحفيزي مهتم بالتنمية البشرية وصناعة التغيير.</p>
-      <a href="#contact" class="btn">اطلب تواصل</a>
+      <p>كاتب، محاضر، ومتحدث تحفيزي مهتم بالتنمية البشرية وصناعة التغيير.</p>
+      <a href="#contact" class="btn">تواصل معي</a>
     </div>
     <div class="hero-img">
-      <img src="awad.jpg" alt="عوض الدرمكي">
+      <img src="https://i.ibb.co/4jTHjDF/awad.png" alt="عوض الدرمكي">
     </div>
   </section>
 
+  <!-- قسم الأعمال -->
+  <section id="work" class="work-section">
+    <h2 class="section-title">أعمالي</h2>
+    <div class="work-grid">
+      <div class="card">
+        <img src="https://i.ibb.co/wK2vT8t/book1.jpg" alt="كتاب">
+        <h3>كتاب: لا تندم على حلم</h3>
+        <p>رحلة من الإصرار نحو تحقيق الذات والنجاح الحقيقي.</p>
+        <a href="https://www.goodreads.com/book/show/44229069" target="_blank">عرض الكتاب</a>
+      </div>
+      <div class="card">
+        <img src="https://i.ibb.co/VWxGQqg/talk1.jpg" alt="محاضرة">
+        <h3>محاضرة: الإيجابية في الحياة</h3>
+        <p>جلسة ملهمة حول كيفية مواجهة التحديات بالتفكير الإيجابي.</p>
+        <a href="https://www.youtube.com/watch?v=h0SmQzG4TVk" target="_blank">مشاهدة</a>
+      </div>
+      <div class="card">
+        <img src="https://i.ibb.co/3vnVknr/article1.jpg" alt="مقال">
+        <h3>مقال: بناء الذات قبل الأهداف</h3>
+        <p>رؤية مختلفة حول أهمية تنمية الذات أولاً.</p>
+        <a href="https://awaddarmaki.com/articles" target="_blank">اقرأ المقال</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم رسالة / اقتباس -->
+  <section id="quote" class="quote-section">
+    <blockquote>
+      "الحياة لا تنتظر أحداً، لكنّها دائماً تُكافئ من سعى نحوها بشغف وإصرار."
+    </blockquote>
+    <p>- عوض الدرمكي</p>
+  </section>
+
+  <!-- قسم التواصل -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">تواصل معي</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="اسمك" required>
+      <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+      <textarea id="message" placeholder="اكتب رسالتك..." rows="5" required></textarea>
+      <button type="submit" class="btn">أرسل</button>
+    </form>
+  </section>
+
+  <!-- الفوتر -->
   <footer>
     <p>© 2025 جميع الحقوق محفوظة لعوض الدرمكي</p>
   </footer>
