@@ -229,18 +229,31 @@ input, textarea {
 
 .social-links {
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .social-links a {
-  margin: 0 10px;
-  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffffff;
   color: #2a6f97;
-  transition: color 0.3s;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #1e5675;
+  background: #2a6f97;
+  color: #fff;
+  transform: translateY(-5px);
 }
+
 
 /* الفوتر */
 footer {
@@ -287,3 +300,15 @@ body.dark .btn {
   color: #fff;
   background: #3479b8;
 }
+body.dark .social-links a {
+  background: #1e1e1e;
+  color: #e5e5e5;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .social-links a:hover {
+  background: #3479b8;
+  color: #fff;
+}
+
+
