@@ -3,71 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع عوض</title>
+  <title>عوض الدرمكي</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- الهيدر -->
-  <header class="header">
-    <div class="container">
-      <img src="images/logo.png" alt="Logo" class="logo">
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home" data-lang="home">الرئيسية</a></li>
-          <li><a href="#about" data-lang="about">من نحن</a></li>
-          <li><a href="#works" data-lang="works">الأعمال</a></li>
-          <li><a href="#contact" data-lang="contact">تواصل</a></li>
-        </ul>
-      </nav>
-      <div class="controls">
-        <button id="langBtn">EN</button>
-        <button id="themeBtn">🌙</button>
-      </div>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">عوض الدرمكي</div>
+      <ul class="nav-links">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#work">الأعمال</a></li>
+        <li><a href="#contact">تواصل</a></li>
+        <li>
+          <button id="darkToggle" class="dark-btn">🌙</button>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- القسم الرئيسي -->
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1 data-lang="welcome">مرحباً بك في موقع عوض</h1>
-      <p data-lang="desc">هنا هتلاقي كل التفاصيل عن خدماتنا وأعمالنا المميزة.</p>
+      <h1>مرحباً، أنا <span>عوض الدرمكي</span></h1>
+      <p>كاتب ومتحدث تحفيزي مهتم بالتنمية البشرية وصناعة التغيير.</p>
+      <a href="#contact" class="btn">اطلب تواصل</a>
     </div>
-    <img src="images/hero.jpg" alt="Hero Image" class="hero-img">
-  </section>
-
-  <!-- قسم المقالات -->
-  <section id="works" class="works">
-    <h2 data-lang="articles">مقالات وأخبار</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/article1.jpg" alt="Article 1">
-        <h3>عنوان المقال الأول</h3>
-        <p>ملخص قصير عن المقال...</p>
-      </div>
-      <div class="card">
-        <img src="images/article2.jpg" alt="Article 2">
-        <h3>عنوان المقال الثاني</h3>
-        <p>ملخص قصير عن المقال...</p>
-      </div>
-      <div class="card">
-        <img src="images/article3.jpg" alt="Article 3">
-        <h3>عنوان المقال الثالث</h3>
-        <p>ملخص قصير عن المقال...</p>
-      </div>
+    <div class="hero-img">
+      <img src="awad.jpg" alt="عوض الدرمكي">
     </div>
   </section>
 
-  <!-- الفوتر -->
-  <footer class="footer">
-    <p>© 2025 جميع الحقوق محفوظة - عوض</p>
-    <div class="social">
-      <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-    </div>
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة لعوض الدرمكي</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
