@@ -1,18 +1,20 @@
-// Dark Mode toggle
-const toggle = document.getElementById('darkToggle');
-const body = document.body;
-
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-}
-
-toggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+// Dark / Light Mode Toggle
+const modeBtn = document.getElementById("modeToggle");
+modeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  modeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// Contact form (demo)
-function sendMessage(e) {
-  e.preventDefault();
-  alert("تم إرسال رسالتك بنجاح! ✅");
-}
+// Language Toggle
+const langBtn = document.getElementById("langToggle");
+langBtn.addEventListener("click", () => {
+  if (document.documentElement.lang === "ar") {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+    langBtn.textContent = "العربية";
+  } else {
+    document.documentElement.lang = "ar";
+    document.documentElement.dir = "rtl";
+    langBtn.textContent = "English";
+  }
+});
